@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/confirmation.js" defer></script>
+</head>
+<body>
+    <div id="confirmation"></div>
+    <!-- Payment Section -->
+    <div id="payment-section">
+        <h2>Payment Details</h2>
+        <form id="payment-form">
+            <h2>Payment Information</h2>
+        
+            <!-- Cardholder Name -->
+            <label for="card-name">Cardholder Name:</label>
+            <input type="text" id="card-name" placeholder="John Doe" required>
+        
+            <!-- Card Number -->
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+        
+            <!-- Expiry Date -->
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5" required>
+        
+            <!-- CVV -->
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+        
+            <!-- Payment Status (Dynamic) -->
+            <div id="payment-status"></div>
+        
+            <!-- Submit Button -->
+            <button type="submit">Submit Payment</button>
+        </form>
+        
+        <div id="payment-status"></div>
+    </div>
+    <!-- Success Payment Modal -->
+<div id="payment-success-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" role="button" aria-label="Close Modal">&times;</span>
+        <h2>Payment Successful</h2>
+        <p>Your payment has been successfully processed. Thank you for your purchase!</p>
+        <p><strong>Amount Paid: $<span id="amount-paid"></span></strong></p>
+        <button onclick="window.location.href='index.html'">Return to Home</button>
+    </div>
+</div>
+
+</body>
+</html>

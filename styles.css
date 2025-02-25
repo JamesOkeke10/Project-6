@@ -1,0 +1,735 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: #002609;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #014711;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.login-btn:hover {
+    background-color: #335b3c;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #002609;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Image Grid Section */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 350px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image scales properly without distortion */
+    border-radius: 8px;
+}
+
+.grid-item p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.purchase-btn {
+    padding: 10px 20px;
+    background-color: #014711;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.purchase-btn:hover {
+    background-color: #335b3c;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2em;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    text-align: left; /* Align text and elements to the left for better readability */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    color: #153f19;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: rgb(83, 0, 0);
+}
+/* Login Section */
+.login-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #014711;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #335b3c;
+}
+
+.sign-up-link {
+    margin-top: 20px;
+}
+
+.sign-up-link a {
+    color: #014711;
+    text-decoration: none;
+}
+
+.sign-up-link a:hover {
+    text-decoration: underline;
+}
+/* Sign-up Section */
+.sign-up-section {
+    background-color: #f4f4f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Sign-up Form */
+.sign-up-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.sign-up-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #014711;
+}
+
+/* Form Field Label */
+.sign-up-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Input Fields */
+.sign-up-form input[type="text"],
+.sign-up-form input[type="email"],
+.sign-up-form input[type="password"],
+.sign-up-form input[type="tel"],
+.sign-up-form input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Styles */
+.sign-up-form input[type="text"]:focus,
+.sign-up-form input[type="email"]:focus,
+.sign-up-form input[type="password"]:focus,
+.sign-up-form input[type="tel"]:focus,
+.sign-up-form input[type="date"]:focus {
+    border-color: #014711;
+    outline: none;
+    box-shadow: 0 0 5px rgba(1, 71, 17, 0.5);
+}
+
+/* Sign-up Form Section */
+.signup-form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Form Heading */
+.signup-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #014711;
+}
+
+/* Form Field Label */
+.signup-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Input Fields */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Styles */
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus,
+.signup-form input[type="date"]:focus {
+    border-color: #014711;
+    outline: none;
+    box-shadow: 0 0 5px rgba(1, 71, 17, 0.5);
+}
+
+/* Sign-up Button */
+.signup-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #014711;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.signup-form button:hover {
+    background-color: #335b3c;
+}
+
+/* Link to Login */
+.signup-form .login-link {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #014711;
+    text-align: center;
+}
+
+.signup-form .login-link a {
+    text-decoration: none;
+}
+
+.signup-form .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message (if needed) */
+.signup-form .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Additional Layout for the Sign-Up Form */
+.signup-form .form-container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Form Styling for Modal */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form select,
+form button {
+    width: 100%; /* Full-width for form fields */
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #014711;
+    outline: none;
+    box-shadow: 0 0 5px rgba(1, 71, 17, 0.5);
+}
+
+form .radio-group {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 15px;
+}
+
+form .radio-group label {
+    font-weight: normal;
+}
+
+form button {
+    background-color: #014711;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #335b3c;
+}
+
+/* Headings in Modal */
+.modal-content h2 {
+    text-align: center;
+    color: #014711;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Align Radio Buttons */
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Add Form Container */
+.form-container {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Make the total stand out */
+#total-amount {
+    color: #014711;
+    font-size: 18px;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #002609;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Confirmation Page */
+#confirmation {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#confirmation h1 {
+    color: #014711;
+    margin-bottom: 20px;
+}
+
+#confirmation p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust the width */
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* General Form Styling */
+#payment-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#payment-form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Label Styling */
+#payment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Input Field Styling */
+#payment-form input[type="text"],
+#payment-form input[type="tel"],
+#payment-form input[type="email"],
+#payment-form input[type="number"],
+#payment-form input[type="password"],
+#payment-form input[type="date"],
+#payment-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+#payment-form input[type="text"]:focus,
+#payment-form input[type="tel"]:focus,
+#payment-form input[type="email"]:focus,
+#payment-form input[type="number"]:focus,
+#payment-form input[type="password"]:focus,
+#payment-form input[type="date"]:focus,
+#payment-form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.3);
+}
+
+/* Button Styling */
+#payment-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#payment-form button:hover {
+    background-color: #45a049;
+}
+/* Invalid and Valid Field Styling */
+#payment-form input.valid {
+    border-color: #4CAF50; /* Green for valid input */
+    background-color: #e8f5e9;
+}
+
+#payment-form input.invalid {
+    border-color: #f44336; /* Red for invalid input */
+    background-color: #ffebee;
+}
+
+#payment-status {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#payment-status .error {
+    color: red;
+    font-weight: bold;
+}
+
+#payment-status .success {
+    color: green;
+    font-weight: bold;
+}
+
+/* Error Message Styling */
+#payment-status {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Success Message Styling */
+#payment-status .success {
+    color: green;
+    font-weight: bold;
+}
+
+#payment-status .error {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+/* Mission Section */
+.mission-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.mission-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.mission-section p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-member h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.team-member p {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: #555;
+}

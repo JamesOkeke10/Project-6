@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Purchase - Ticket Planet</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <!-- Login/Logout links -->
+        <a href="login.html" id="login-link" style="display:none;">Login</a>
+        <a href="#" id="logout" style="display:none;">Logout</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero.jpg" alt="Event Banner" class="hero-image">
+        <div class="hero-content">
+            <h1>Welcome</h1>
+            <p>Purchase tickets for your favorite events with ease. Join the excitement today!</p>
+            <a href="login.html" class="login-btn" id="login-btn" style="display:none;">Login</a>
+        </div>
+    </section>
+
+    <!-- Event Cards Section -->
+    <section class="image-grid">
+        <!-- Event Cards -->
+        <div class="grid-item">
+            <p>COOL NIGHTS</p>
+            <img src="images/event1.jpg" alt="Cool Nights Event"><br>
+            <button class="purchase-btn" data-event="Cool Nights">Purchase</button>
+        </div>
+        <div class="grid-item">
+            <p>CHROMEO</p>
+            <img src="images/event2.jpg" alt="Chromeo Event"><br>
+            <button class="purchase-btn" data-event="Chromeo">Purchase</button>
+        </div>
+        <div class="grid-item">
+            <p>DIGITAL MARKETING</p>
+            <img src="images/event3.jpg" alt="Digital Marketing Workshop"><br>
+            <button class="purchase-btn" data-event="Digital Marketing">Purchase</button>
+        </div>
+        <div class="grid-item">
+            <p>CHARITY EVENT</p>
+            <img src="images/event4.jpg" alt="Event 4"><br>
+            <button class="purchase-btn" data-event="Charity Event">Purchase</button>
+        </div>
+        <div class="grid-item">
+            <p>SPRING OPEN HOUSE</p>
+            <img src="images/event5.jpg" alt="Event 5"><br>
+            <button class="purchase-btn" data-event="Spring Open House">Purchase</button>
+        </div>
+        <div class="grid-item">
+            <p>ROCK OF AGES</p>
+            <img src="images/event6.jpg" alt="Event 6"><br>
+            <button class="purchase-btn" data-event="Rock of Ages">Purchase</button>
+        </div>
+    </section>
+
+    <!-- Purchase Modal -->
+    <div id="purchase-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" role="button" aria-label="Close Modal">&times;</span>
+            <h2>Purchase Tickets</h2>
+            <form id="purchase-form">
+                <div class="form-container">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" placeholder="Enter your first name" required>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" placeholder="Enter your last name" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" required title="Phone number must be in the format: 123-456-7890">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required 
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                        title="Please enter a valid email address (e.g., user@example.com)">
+
+                    <label for="ticket-type">Ticket Type:</label>
+                    <select id="ticket-type" required>
+                        <option value="" disabled selected>Select a ticket type</option>
+                        <option value="Regular">Regular - $20</option>
+                        <option value="VIP">VIP - $50</option>
+                        <option value="Student">Student - $15</option>
+                    </select>
+
+                    <label for="quantity">Ticket Quantity:</label>
+                    <input type="number" id="quantity" min="1" max="10" value="1" required>
+
+                    <p id="total-amount" style="font-weight: bold; margin-top: 10px;">Total Amount: $0</p>
+
+                    <!-- Hidden fixed data -->
+                    <input type="hidden" id="event-name" value="Concert Event">
+                    <input type="hidden" id="event-date" value="2024-12-31">
+                    <input type="hidden" id="organizer" value="Music Co.">
+
+                    <button type="submit">Purchase</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ticket Planet | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
